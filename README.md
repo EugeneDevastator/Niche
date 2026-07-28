@@ -1,8 +1,9 @@
 # ni - Terminal UI Library (niche)
 
 A high-performance terminal UI library with GPU-accelerated rendering using OpenGL.
-![scroll.png](scroll.png)
 ![styles.png](styles.png)
+![scroll.png](scroll.png)
+
 
 ## Features
 
@@ -11,6 +12,8 @@ A high-performance terminal UI library with GPU-accelerated rendering using Open
 - Built-in UI components (buttons, inputs, file browser, etc.)
 - Scrollable regions and text rendering
 - SDF (Signed Distance Field) character rendering
+
+### BELOW DOESNT WORK YET. LIB NOT PUBLISHED.
 
 ## Installation
 
