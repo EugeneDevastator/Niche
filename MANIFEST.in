@@ -1,0 +1,7 @@
+include pyproject.toml
+include README.md
+include LICENSE
+include setup.py
+recursive-include src/ni/shaders *.vert *.frag
+recursive-include src/ni/_ni_core *.c *.py
+recursive-include examples *.py

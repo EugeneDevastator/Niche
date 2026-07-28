@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=64", "wheel", "cython"]
+build-backend = "setuptools.backends._legacy:_Backend"
+
+[project]
+name = "ni-terminal"
+version = "1.0.0"
+description = "A high-performance terminal UI library with GPU-accelerated rendering"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "OpenCode-Drive Contributors"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: User Interface",
+    "Topic :: Terminals",
+]
+keywords = ["terminal", "tui", "ui", "gpu", "opengl"]
+
+[project.urls]
+Homepage = "https://github.com/opencode/niche"
+Repository = "https://github.com/opencode/niche"
+Issues = "https://github.com/opencode/niche/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.package-data]
+"ni" = ["shaders/*.vert", "shaders/*.frag", "_ni_core/*.c", "_ni_core/*.py"]
+
+[tool.setuptools.ext-modules]
+name = "ni._ni_core._quads"
+sources = ["src/ni/_ni_core/_quads.c"]
